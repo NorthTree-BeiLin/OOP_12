@@ -1,18 +1,15 @@
-#include"employ.h"
+#include"tringle.h"
+
 int main()
 {
-	employee *ptr;
-	manager m((char *)"Zhang Hua", "2018110001", 1500.0);
-	salesman n((char *)"Yang Rong", "2018110002", 300.0);
-	ptr = &m;
-	ptr->print();
-	cout << "earing per week:" << ptr->getslary() << endl;
-	cout << "earning per week:" << m.getslary() << endl;
-	cout << endl;
-	ptr = &n;
-	ptr->print();
-	cout << "earing per week:" << ptr->getslary() << endl;
-	cout << "earning per week:" << n.getslary() << endl;
+	tringle a(3, 4, 5),b(6,9,7);
+	tringle c(a);
+	cout << "三角形a:" << endl << a << "三角形b:" << endl << b << "三角形c：" << c << endl;
+	cout << "b、c交换后,三角形c：" << endl;
+	c= b;
+	cout << c<<endl;
+	cout << "两个三角形的面积之和为：" << a + b << endl;
 	system("pause");
-	return 0;
+
+
 }
